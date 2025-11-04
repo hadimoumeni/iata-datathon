@@ -26,7 +26,7 @@ By Nov 6th:
 
 
 Nov 3rd - 7th:
-- Attend Mentorship 1: Execute the first mentorship session. Someone must write up the minutes from the meeting is recorded.
+- Attend Mentorship 1: Execute the first mentorship session. Someone must write up the minutes from the meeting.
 - Review EDA Workshop for guidance.
 
 Phase 1 Deliverable: A fully configured collaboration suite, a prioritized list of data sources, and a clear set of strategic questions validated by our mentor.
