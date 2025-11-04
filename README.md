@@ -7,9 +7,9 @@ Our Winning Philosophy:
 We will win by combining impeccable technical execution with deep strategic insight. Our work will not only answer the questions asked but will also provide a compelling, evidence-based vision for the future of sustainable aviation in Europe. We will meticulously address every point in the technical (T1-T5) and business (B1-B3) evaluation criteria.
 
 Key Roles:
-Project Lead
-Data Lead
-Economic & Policy Lead
+- Project Lead
+- Data Lead
+- Economic & Policy Lead
 
 Phase 1: Foundation & Mentorship Prep (Nov 3rd - Nov 7th)
 Objective: To establish our project infrastructure and core strategy immediately, and to prepare targeted questions for our first mentorship session. This phase is critical and must be executed with urgency.
