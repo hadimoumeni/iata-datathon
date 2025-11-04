@@ -1,0 +1,28 @@
+"SAF0101: Amount of fuel in TJ (equivalent) and millions of litres, by fuel type and supply period, United Kingdom, 2025 (first provisional)",,,,,,,,,,,,,,,,,,
+"This is the first provisional report, containing information received by the DfT as of the 31 July 2025.",,,,,,,,,,,,,,,,,,
+This worksheet contains one table. Notes for this table can be seen in the Notes worksheet.,,,,,,,,,,,,,,,,,,
+This table includes information on SAF certified and accepted as sustainable as well as in progress applications of SAF which are yet to be accepted as sustainable by the Low Carbon Fuel Delivery Unit.,,,,,,,,,,,,,,,,,,
+"Supply periods start on the 15 of one month and end on the 14 of the next, except for January (starts on the 1, ends on the 14) and December (starts on the 15, ends on the 31).",,,,,,,,,,,,,,,,,,
+"There is some shorthand used in this table: [low] refers to a value less than 0.5, [low%] refers to a value less than 0.5%. [x] means no notes apply to that row.",,,,,,,,,,,,,,,,,,
+Back to contents,,,,,,,,,,,,,,,,,,
+See notes,,,,,,,,,,,,,,,,,,
+Renewable status,Fuel type,"Unit
+[Note 2]",Jan,Jan to Feb,Feb to Mar,Mar to Apr,Apr to May,May to Jun,Jun to Jul,Jul to Aug,Aug to Sep,Sep to Oct,Oct to Nov,Nov to Dec,Dec,Total,Percent of all fuel supplied,Notes
+Fossil fuel,Avtur,Litres (millions),128,906,944,"1,135","1,153","1,245",227,0,0,0,0,0,0,"5,739",98.71%,[x]
+Fossil fuel,Avtur,TJ,"4,368","30,791","32,098","38,603","39,217","42,330","7,704",0,0,0,0,0,0,"195,111",98.71%,[x]
+Fossil fuel,Total fossil fuel,Litres (millions),128,906,944,"1,135","1,153","1,245",227,0,0,0,0,0,0,"5,739",98.71%,[x]
+Fossil fuel,Total fossil fuel,TJ,"4,368","30,791","32,098","38,603","39,217","42,330","7,704",0,0,0,0,0,0,"195,111",98.71%,[x]
+Regular SAF,Avtur (sustainable),Litres (millions),0,7,19,5,9,35,0,0,0,0,0,0,0,75,1.29%,[x]
+Regular SAF,Avtur (sustainable),TJ,0,224,630,176,323,"1,197",0,0,0,0,0,0,0,"2,550",1.29%,[x]
+Regular SAF,Avgas,Litres (millions),0,0,0,[low],0,0,0,0,0,0,0,0,0,[low],0.00%,[x]
+Regular SAF,Avgas,TJ,0,0,0,5,0,0,0,0,0,0,0,0,0,5,0.00%,[x]
+Regular SAF,Total regular SAF,Litres (millions),0,7,19,5,9,35,0,0,0,0,0,0,0,75,1.29%,[x]
+Regular SAF,Total regular SAF,TJ,0,224,630,180,323,"1,197",0,0,0,0,0,0,0,"2,555",1.29%,[x]
+Power to liquid SAF,Power to liquid SAF,Litres (millions),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.00%,[Note 1]
+Power to liquid SAF,Power to liquid SAF,TJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.00%,[Note 1]
+Power to liquid SAF,Total Power to liquid SAF,Litres (millions),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.00%,[Note 1]
+Power to liquid SAF,Total Power to liquid SAF,TJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.00%,[Note 1]
+SAF,Total SAF,Litres (millions),0,7,19,5,9,35,0,0,0,0,0,0,0,75,1.29%,[x]
+SAF,Total SAF,TJ,0,224,630,180,323,"1,197",0,0,0,0,0,0,0,"2,555",1.29%,[x]
+All fuel,Total all fuel,Litres (millions),128,912,963,"1,141","1,163","1,280",227,0,0,0,0,0,0,"5,814",100.00%,[x]
+All fuel,Total all fuel,TJ,"4,368","31,015","32,728","38,783","39,540","43,527","7,704",0,0,0,0,0,0,"197,666",100.00%,[x]
