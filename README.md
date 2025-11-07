@@ -51,7 +51,40 @@ Storytelling & Narrative:
 - Attend Storytelling Through Data Workshop (Nov 12th): Absorb all lessons and apply them to our project.
 - Draft Executive Summary Outline: Create the structure based on the Pyramid Principle. As the analysts produce charts and insights, begin slotting them into the narrative.
 
+Strategic Research Approach
+For Objective 1 (Quantifying SAF Impact on Emissions):
 
+Use EUROCONTROL data to establish baseline EU aviation traffic (2025-2050 projections)​
+
+Apply IATA/ICAO emissions factors to calculate CO₂ from conventional jet fuel​
+
+Model two scenarios using ReFuelEU mandates:​
+
+S0 (Market-driven BAU): Voluntary SAF uptake without mandates
+
+S1 (Policy-accelerated): 2%, 6%, 20%, 34%, 42%, 70% blending by 2025, 2030, 2035, 2040, 2045, 2050​
+
+Calculate avoided emissions using HEFA lifecycle reduction factors (76-97%)​
+
+For Objective 2 (Economic & Policy Implications):
+
+Project fuel costs using SAF price forecasts and blending mandates​
+
+Analyze EU ETS carbon pricing impacts on airline operating costs​
+
+Assess feedstock availability constraints and infrastructure requirements​
+
+Evaluate policy mechanisms: mandates vs. incentives vs. carbon pricing effectiveness​​
+
+For Objective 3 (Communication & Vision):
+
+Synthesize quantitative findings into clear emissions reduction pathways
+
+Benchmark against IATA Net Zero 2050 roadmap showing SAF contributing 65% of emissions reduction​
+
+Identify critical barriers: feedstock limitations, production scaling, price gaps, infrastructure needs
+
+Present strategic recommendations grounded in your data analysis
 Nov 17th - 21st:
 Prepare for and Attend Mentorship 2: This session should be used to validate our work beyond the scope of their expectations. Present our S2 scenario and its findings to the mentor for feedback and critique.
 
