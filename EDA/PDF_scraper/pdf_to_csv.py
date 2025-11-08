@@ -1,13 +1,4 @@
 #!/usr/bin/env python3
-"""
-Simple PDF table scraper using tabula-py.
-
-This script extracts tables from a PDF and writes them to one or more CSV files.
-
-Notes:
-- Requires Java installed and available on PATH (tabula-py uses tabula-java).
-- Install Python deps with: pip install -r requirements.txt
-"""
 from __future__ import annotations
 
 import argparse
@@ -79,25 +70,25 @@ def check_java():
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Extract tables from a PDF using tabula-py and save as CSV(s).")
-    parser.add_argument("pdf", type=Path, help="Input PDF file path")
-    parser.add_argument("-o", "--output", type=Path, default=None, help="Output CSV file or directory (if not provided, uses PDF basename)")
+    parser = argparse.ArgumentParser(description="Extract tables from a PDF or directory (tabula-py) and save as CSV(s).")
+    parser.add_argument("path", type=Path, help="Input PDF file or directory containing PDFs (will ignore other files)")
+    parser.add_argument("-o", "--output", type=Path, default=None, help="Output CSV file or output directory. When input is a directory, this should be a directory.")
     parser.add_argument("--pages", default="all", help="Pages to parse (e.g. '1', '1-3', 'all'). Default: all")
     parser.add_argument("--lattice", action="store_true", help="Use lattice mode (good for tables with visible lines)")
     parser.add_argument("--guess", dest="guess", action="store_true", default=True, help="Let tabula guess table areas (default)")
     parser.add_argument("--no-guess", dest="guess", action="store_false", help="Disable guessing of table areas")
-    parser.add_argument("--single", action="store_true", help="Merge all found tables into a single CSV (may produce uneven columns)")
+    parser.add_argument("--single", action="store_true", help="Merge all found tables per-PDF into a single CSV (may produce uneven columns)")
+    parser.add_argument("--recursive", "-r", action="store_true", help="Recursively search directories for PDFs")
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
 
     args = parser.parse_args(argv)
-    pdf = args.pdf
-    if not pdf.exists():
-        print(f"ERROR: PDF not found: {pdf}")
+    input_path = args.path
+
+    if not input_path.exists():
+        print(f"ERROR: input path not found: {input_path}")
         return 2
 
-    default_out = pdf.with_suffix(".csv")
-    output = args.output or default_out
-
+    # If tabula-py not available, bail early with a helpful message
     if tabula is None:
         print("ERROR: tabula-py unavailable. Please install the Python dependency (see requirements.txt).", file=sys.stderr)
         print("tabula-py requires Java (tabula-java). Make sure Java is installed and on PATH (java -version).", file=sys.stderr)
@@ -106,24 +97,72 @@ def main(argv=None):
     if not check_java():
         print("WARNING: Java doesn't seem to be available on PATH. tabula-py may fail. Ensure Java is installed and 'java' is on your PATH.")
 
-    try:
-        dfs = extract_with_tabula(pdf, pages=args.pages, lattice=args.lattice, guess=args.guess)
-    except Exception as e:
-        print("Failed to extract tables with tabula-py:", e, file=sys.stderr)
-        return 4
+    # Build list of PDF files to process
+    pdf_files: List[Path] = []
+    if input_path.is_file():
+        if input_path.suffix.lower() == ".pdf":
+            pdf_files = [input_path]
+        else:
+            print(f"ERROR: given file is not a PDF: {input_path}")
+            return 2
+    else:
+        # directory: find PDFs (non-recursive by default)
+        if args.recursive:
+            pdf_files = [p for p in input_path.rglob("*.pdf") if p.is_file()]
+        else:
+            pdf_files = [p for p in input_path.glob("*.pdf") if p.is_file()]
 
-    if not dfs:
-        print("No tables found in PDF.")
+    if not pdf_files:
+        print(f"No PDF files found under: {input_path}")
         return 0
 
-    written = write_tables(dfs, output, single=args.single)
+    # Determine output behavior
+    out_arg = args.output
+    multiple_inputs = len(pdf_files) > 1
+
+    # default clean_data directory in repo root (current working dir)
+    repo_clean_dir = Path.cwd() / "clean_data"
+    written_all: List[Path] = []
+
+    for pdf in sorted(pdf_files):
+        # Choose output path per PDF
+        if out_arg:
+            # If output arg is a directory or multiple inputs, ensure directory
+            if multiple_inputs or (out_arg.exists() and out_arg.is_dir()):
+                out_dir = out_arg
+                out_dir.mkdir(parents=True, exist_ok=True)
+                out_path = out_dir / f"{pdf.stem}.csv"
+            else:
+                # Single input and output points to a file path (may not exist yet)
+                out_path = out_arg
+        else:
+            # No output provided: send outputs into repo's clean_data folder
+            repo_clean_dir.mkdir(parents=True, exist_ok=True)
+            out_path = repo_clean_dir / f"{pdf.stem}.csv"
+
+        if args.verbose:
+            print(f"Processing: {pdf} -> {out_path}")
+
+        try:
+            dfs = extract_with_tabula(pdf, pages=args.pages, lattice=args.lattice, guess=args.guess)
+        except Exception as e:
+            print(f"Failed to extract tables from {pdf}: {e}", file=sys.stderr)
+            continue
+
+        if not dfs:
+            if args.verbose:
+                print(f"No tables found in {pdf}")
+            continue
+
+        written = write_tables(dfs, out_path, single=args.single)
+        written_all.extend(written)
 
     if args.verbose:
-        print(f"Wrote {len(written)} CSV file(s):")
-        for p in written:
+        print(f"Wrote {len(written_all)} CSV file(s)")
+        for p in written_all:
             print(" -", p)
-    else:
-        print(str(written[0]))
+    elif written_all:
+        print(str(written_all[0]))
 
     return 0
 
