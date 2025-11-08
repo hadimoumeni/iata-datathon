@@ -52,37 +52,31 @@ Storytelling & Narrative:
 - Draft Executive Summary Outline: Create the structure based on the Pyramid Principle. As the analysts produce charts and insights, begin slotting them into the narrative.
 
 Strategic Research Approach
+
 For Objective 1 (Quantifying SAF Impact on Emissions):
-
-Use EUROCONTROL data to establish baseline EU aviation traffic (2025-2050 projections)​
-
-Apply IATA/ICAO emissions factors to calculate CO₂ from conventional jet fuel​
-
-Model two scenarios using ReFuelEU mandates:​
-
-S0 (Market-driven BAU): Voluntary SAF uptake without mandates
-
-S1 (Policy-accelerated): 2%, 6%, 20%, 34%, 42%, 70% blending by 2025, 2030, 2035, 2040, 2045, 2050​
-
-Calculate avoided emissions using HEFA lifecycle reduction factors (76-97%)​
+1. Use EUROCONTROL data to establish baseline EU aviation traffic (2025-2050 projections)​
+2. Apply IATA/ICAO emissions factors to calculate CO₂ from conventional jet fuel​
+3. Model two scenarios using ReFuelEU mandates:​
+  - S0 (Market-driven BAU): Voluntary SAF uptake without mandates
+  - S1 (Policy-accelerated): 2%, 6%, 20%, 34%, 42%, 70% blending by 2025, 2030, 2035, 2040, 2045, 2050​
+4. Calculate avoided emissions using HEFA lifecycle reduction factors (76-97%)​
 
 For Objective 2 (Economic & Policy Implications):
-
-Project fuel costs using SAF price forecasts and blending mandates​
-
-Analyze EU ETS carbon pricing impacts on airline operating costs​
-
-Assess feedstock availability constraints and infrastructure requirements​
-
-Evaluate policy mechanisms: mandates vs. incentives vs. carbon pricing effectiveness​​
+1. Project fuel costs using SAF price forecasts and blending mandates​
+2. Analyze EU ETS carbon pricing impacts on airline operating costs​
+3. Assess feedstock availability constraints and infrastructure requirements​
+4. Evaluate policy mechanisms: mandates vs. incentives vs. carbon pricing effectiveness​​
 
 For Objective 3 (Communication & Vision):
+1. Synthesize quantitative findings into clear emissions reduction pathways
+2. Benchmark against IATA Net Zero 2050 roadmap showing SAF contributing 65% of emissions reduction​
+3. Identify critical barriers: feedstock limitations, production scaling, price gaps, infrastructure needs
 
-Synthesize quantitative findings into clear emissions reduction pathways
-
-Benchmark against IATA Net Zero 2050 roadmap showing SAF contributing 65% of emissions reduction​
-
-Identify critical barriers: feedstock limitations, production scaling, price gaps, infrastructure needs
+Quality Assurance & Validation
+- Cross-reference multiple sources for consistency (e.g., IATA vs. EUROCONTROL traffic data)
+- Document all assumptions clearly (discount rates, growth projections, efficiency improvements)
+- Use conservative estimates where uncertainty exists 
+- Validate emissions calculations against published benchmarks (e.g., ~942 Mt CO₂ global aviation in 2024)​
 
 Present strategic recommendations grounded in your data analysis
 Nov 17th - 21st:
