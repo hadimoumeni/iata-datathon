@@ -1,0 +1,58 @@
+# --- Python ---
+# Byte-compiled / optimized / C extensions
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Jupyter Notebooks ---
+# Checkpoints
+.ipynb_checkpoints
+
+# --- Data Files ---
+# Ignore all data files to keep the repository lightweight.
+# This is the most important rule for this project.
+data/
+
+# --- IDE / Editor specific ---
+# VSCode
+.vscode/
+# PyCharm
+.idea/
+
+# --- OS specific ---
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+
+# --- Research/Deliverables ---
+# (Optional) You may want to ignore large PDF files or temporary presentation files.
+# For example, to ignore all PDF files in the research folder:
+research/*.pdf
