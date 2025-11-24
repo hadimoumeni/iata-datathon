@@ -1,0 +1,4 @@
+Year,Scenario,Total_Fuel,SAF_Share,CO2_Emissions,Avoided_CO2
+# Scenario: 0 = BAU (S0), 1 = Policy (S1)
+# Units: Total_Fuel (Mt), SAF_Share (%), CO2_Emissions (Mt), Avoided_CO2 (Mt)
+
