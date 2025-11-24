@@ -1,0 +1,3 @@
+year,traffic_index_2025=100
+# Provide 2025..2050. 2025 must equal 100; later years are an index.
+
