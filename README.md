@@ -104,6 +104,26 @@ The Final Presentation (Lead Storyteller):
 - Reproducibility Test: Have a team member run the entire notebook from a clean environment. If it produces a single error, it fails the test and must be fixed.
 - Prepare Submission Package (Nov 27th): Project Lead to gather the final Notebook, Output File, and Executive Report.
 
+## Objective 1 – How to reproduce
+
+1. Open `notebooks/obj1_pipeline.ipynb` in Google Colab.
+
+2. Run all cells:
+
+   - Loads clean inputs from `data/clean/` (traffic, fuel baseline, SAF blending).
+
+   - Computes `Total_Fuel`, `SAF_Share`, `CO2_Emissions`, `Avoided_CO2` for S0 and S1.
+
+   - Prints the structure and sample rows of `data/metrics/obj1_official_output__eu27__annual__2026-2050.csv`.
+
+3. All assumptions and sources are documented in:
+
+   - `references/assumptions.yaml`
+
+   - `docs/sources/*.md`
+
+This hits the datathon's requirements for code clarity, reproducibility, and visible output format.
+
 Final Submission - Nov 28th @ 12pm:
 We submit the night before the deadline.
 
