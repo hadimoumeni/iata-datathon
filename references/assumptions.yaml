@@ -1,0 +1,18 @@
+units:
+  mass: Mt           # million tonnes
+  co2: Mt
+  fuel_price: EUR_per_t
+  carbon_price: EUR_per_tCO2
+
+constants:
+  toe_to_GJ: 41.868
+  jet_ncv_MJ_per_kg: 44.1
+  jet_ef_tCO2_per_t: 3.15
+  saf_lca_reduction_central_pct: 75
+
+geography:
+  eu27_list: [AT, BE, BG, HR, CY, CZ, DK, EE, FI, FR, DE, EL, HU, IE, IT, LV, LT, LU, MT, NL, PL, PT, RO, SK, SI, ES, SE]
+
+notes:
+  - "Outputs aggregated at EU27 level; UK/CH excluded per scope."
+
