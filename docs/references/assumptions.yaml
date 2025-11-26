@@ -1,0 +1,46 @@
+scope:
+  geography: "EU27 (UK/CH excluded)"
+  activity_metric: "Number of commercial flights (Eurostat avia_tf_cm), aggregated to annual EU27 index (2025=100)"
+  fuel_scope: "Kerosene-type jet fuel, domestic + international aviation final consumption (Eurostat nrg_bal_c)"
+  years_modelled: [2025, 2050]
+  years_official_output: [2026, 2050]
+
+baseline:
+  fuel_2025_mt:
+    value: 38.5
+    source: "IE–IATA Datathon 2025 brief (recommended 38–39 Mt) + Eurostat nrg_bal_c"
+    note: "Use actual Eurostat 2025 value if available; otherwise central estimate within 38–39 Mt range."
+
+scenarios:
+  S0:
+    label: "Market-driven BAU (no mandates)"
+    description: "SAF adoption evolves naturally without ReFuelEU minimum blending mandates; driven by voluntary initiatives and limited incentives."
+    anchors_pct:
+      2025: 1.0
+      2030: 3.0
+      2035: 10.0
+      2050: 35.0
+    interpolation: "Piecewise linear by year between anchors."
+  S1:
+    label: "Policy-accelerated (high ambition)"
+    description: "SAF trajectory aligned with ReFuelEU minimum mandates and exceeding them by ~5–10 percentage points from 2030 onwards, consistent with IE–IATA guidance."
+    anchors_pct:
+      2025: 2.0      # matches ReFuelEU minimum and IE–IATA indicative 2%
+      2030: 11.0     # within 10–12% range suggested in the brief
+      2035: 30.0     # matches IE–IATA indicative 30%
+      2050: 70.0     # ReFuelEU target
+    interpolation: "Piecewise linear by year between anchors."
+
+physics:
+  emission_factor_tCO2_per_t_fuel:
+    value: 3.16
+    source: "Standard aviation emission factor (IPCC/EEA typical value; not specified in IE–IATA brief)."
+  saf_lca_reduction_pct:
+    value: 75.0
+    source: "IE–IATA brief suggests 70% or 80% as reference; we choose central value 75% for modelling."
+
+units:
+  fuel: "Mt (million tonnes of fuel)"
+  co2: "Mt (million tonnes of CO2)"
+  saf_share: "percent of total fuel (0–100)"
+  traffic_index: "index with 2025 = 100"

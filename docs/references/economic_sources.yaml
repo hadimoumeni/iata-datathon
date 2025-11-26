@@ -1,0 +1,47 @@
+economic_assumptions:
+  scope: "EU-27 Aviation Decarbonization (2025-2050)"
+  currency: "USD (Real 2024)"
+  
+  metrics:
+    jet_a1_price:
+      range: "$800 -> $950"
+      source: "IATA Jet Fuel Price Monitor / Platts"
+      link: "https://www.iata.org/en/publications/economics/fuel-monitor/"
+      description: "Baseline fossil fuel price. Increase is driven by carbon pricing, not the commodity cost. 'Average jet fuel price for 2025 is forecast at $86/bbl'."
+    
+    hefa_saf_price:
+      range: "$2,200 -> $1,850"
+      source: "Argus Media / SkyNRG Outlook"
+      link: "https://www.argusmedia.com/en/news-and-insights/latest-market-news"
+      description: "Bio-based SAF price floor. 'HEFA prices in NW Europe hit ~$2,900/t in late 2024.' We use $2,200 as a conservative floor due to feedstock scarcity."
+    
+    ptl_saf_price:
+      range: "$3,800 -> $1,200"
+      source: "ICCT Waypoint 2050 / Bain"
+      link: "https://theicct.org/publication/aviation-vision-2050-sept25/"
+      description: "Power-to-Liquid e-fuels. Currently expensive (~13x Jet A-1), but 'production cost is expected to decrease to ~$1,200/t by 2050' as renewable energy scales."
+    
+    carbon_price_ets:
+      range: "€90 -> €275"
+      source: "EU Commission 'Fit for 55' Impact Assessment"
+      link: "https://climate.ec.europa.eu/eu-action/european-green-deal/2030-climate-target-plan_en"
+      description: "The penalty for fossil emissions. Free allowances for aviation drop to 0% by 2026. 'Carbon prices must rise to €200+ to drive decarbonization.'"
+    
+    hefa_supply_cap_eu:
+      value: "5.0 Mt/year"
+      source: "ICCT / IEA Bioenergy Task 39"
+      link: "https://theicct.org/wp-content/uploads/2021/06/Sustainable-aviation-fuel-feedstock-eu-mar2021.pdf"
+      description: "The 'Feedstock Wall'. Global waste oil is finite. 'We estimate sufficient resource base to support approx 3.4 Mt of advanced SAF annually in the EU.'"
+    
+    logistics_penalty:
+      value: "$150 / tonne"
+      source: "Internal Team S2 Calculation (Logistics Analysis)"
+      link: "https://cavs.msstate.edu/publications/docs/2015/02/13104MarufEksiogluRafael_TRA2015.pdf"
+      description: "Cost differential between decentralized trucking (S1) and centralized pipelines (S2 Book & Claim). Based on heavy-duty transport cost analysis."
+    
+    logistics_carbon_penalty:
+      value: "50 gCO2 / t-km"
+      source: "ICCT Heavy Duty Vehicle Emissions"
+      link: "https://theicct.org/publication/co2-emissions-from-trucks-in-the-eu-an-analysis-of-the-heavy-duty-co2-standards-baseline-data/"
+      description: "Emissions form fuel transport. 'Long-haul tractor-trailers emitted on average 57 gCO2/t-km.' Adjusted to 50g for model conservatism."
+
