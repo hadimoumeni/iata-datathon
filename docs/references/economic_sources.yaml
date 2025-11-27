@@ -44,4 +44,49 @@ economic_assumptions:
       source: "ICCT Heavy Duty Vehicle Emissions"
       link: "https://theicct.org/publication/co2-emissions-from-trucks-in-the-eu-an-analysis-of-the-heavy-duty-co2-standards-baseline-data/"
       description: "Emissions form fuel transport. 'Long-haul tractor-trailers emitted on average 57 gCO2/t-km.' Adjusted to 50g for model conservatism."
+    
+    smart_levy_rate:
+      range: "€7.40 → €40 per passenger"
+      source: "France airline ticket solidarity tax (TSBA)"
+      link: "https://solidaritylevies.org/france-dashboard-profile/"
+      description: >
+        France applies a distance-based solidarity levy on airline tickets:
+        €7.40 for domestic/intra-EEA economy up to €40 for long-haul economy.
+        We use €15 per passenger as a central EU-wide Smart Levy level.
+    
+    eu27_air_passengers:
+      range: "816m → 973m passengers/year"
+      source: "Eurostat 'Air passenger transport statistics' (2022–2023)"
+      link: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Air_passenger_transport_statistics"
+      description: >
+        Eurostat reports 816 million air passengers in the EU in 2022 and
+        973 million in 2023. We round to 1.0 billion passengers/year as a
+        stable central estimate for 2026+ in the Smart Levy scenario.
+    
+    levy_to_saf_share:
+      value: "80% of levy revenue"
+      source: "Internal Smart Levy design choice"
+      link: "https://example.com"
+      description: >
+        We assume 80% of levy proceeds are earmarked to close the SAF–kerosene
+        price gap via producer subsidies. The remaining 20% covers administration
+        and other climate spending.
+    
+    logistics_tkm_per_tonne:
+      value: "1,000 t-km per tonne SAF"
+      source: "Internal logistics modelling assumption"
+      link: "https://cavs.msstate.edu/publications/docs/2015/02/13104MarufEksiogluRafael_TRA2015.pdf"
+      description: >
+        Approximates average long-haul ground transport distance per tonne of SAF
+        from production sites to EU hubs. Combined with 50 gCO2/t-km to estimate
+        logistics emissions and a logistics carbon penalty.
+    
+    hefa_global_supply_cap:
+      range: "25 → 35 Mt/year"
+      source: "ICCT / IEA Bioenergy Task 39 (global waste-oil limits)"
+      link: "https://theicct.org/wp-content/uploads/2021/06/Sustainable-aviation-fuel-feedstock-eu-mar2021.pdf"
+      description: >
+        Analyses of global waste-oil feedstocks imply a total HEFA potential of a
+        few tens of Mt of SAF per year worldwide. We choose 30 Mt/year as a
+        central global cap, from which the 5 Mt/year EU HEFA cap is derived.
 
